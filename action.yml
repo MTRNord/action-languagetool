@@ -40,6 +40,11 @@ inputs:
   wait_server_startup_duration:
     description: 'Wait the startup of the server.'
     default: '3'
+  # If only changed files should be checked
+  # To disable do not set this flag (any string activates it)
+  use_diff:
+    description: 'Use diff on PRs'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
