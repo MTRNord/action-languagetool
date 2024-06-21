@@ -40,6 +40,9 @@ inputs:
   wait_server_startup_duration:
     description: 'Wait the startup of the server.'
     default: '3'
+  use_diff:
+    description: 'Use diff on PRs'
+    default: 'false'
 runs:
   using: 'docker'
   image: 'Dockerfile'

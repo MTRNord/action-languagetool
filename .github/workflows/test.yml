@@ -41,3 +41,15 @@ jobs:
           level: info
           patterns: "**.md"
           custom_api_endpoint: https://languagetool.org/api
+
+  test-diff:
+    name: runner / languagetool (github-check) / diff
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-check
+          level: info
+          use_diff: true
